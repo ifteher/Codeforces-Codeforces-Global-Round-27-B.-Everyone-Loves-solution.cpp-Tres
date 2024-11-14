@@ -1,0 +1,56 @@
+Solution type-1:
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+ int t;
+ cin>>t;
+ while(t--)
+ {
+    int n;
+    cin>>n;
+    if(n==1 || n==3) cout<<-1<<endl;
+    else if(n%2!=0)
+    {
+        cout<<string(n-5,'3')+"36366"<<endl;///ekhane given N ta odd holee string(n-5,'3')+"36366" dara (n-5)ta 3 tar sathe 36366 print kora hocche.
+    }
+    else if(n%2==0)
+    {
+       cout<<string(n-2,'3')+"66"<<endl;///ekhane given N ta even holee string(n-2,'3')+"66" dara (n-2)ta 3 tar sathe 66 print kora hocche.
+    }
+ }
+return 0;
+}
+
+Solution type-2:
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+ int t;
+ cin>>t;
+ while(t--)
+ {
+    int n;
+    cin>>n;
+    if(n==1 || n==3) cout<<-1<<endl;
+    else if(n%2!=0)
+    {
+    for(int i=0;i<n-5;i++)
+    {
+        cout<<3;
+    }
+    cout<<36366<<endl;
+    }
+    else if(n%2==0)
+    {
+        for(int i=0;i<n-2;i++)
+        {
+            cout<<3;
+        }
+        cout<<66<<endl;
+    }
+ }
+return 0;
+}
